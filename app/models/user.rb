@@ -20,6 +20,16 @@ class User < ActiveRecord::Base
 
   #Коллбеки - то, что влияет на жизненный цикл модели(Можно деформировать полученные от пользователя данные)
   before_save :encrypt_password
+  before_validation :username_downcase
+
+
+  def username_downcase
+    if self.username.present?
+      username.downcase!
+    else
+      nil
+    end
+  end
 
   def encrypt_password
     if self.password.present?
