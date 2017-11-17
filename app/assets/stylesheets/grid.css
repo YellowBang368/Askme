@@ -38,10 +38,6 @@
   clear: both;
 }
 
-.buffer-inside {
-  word-spacing: 0px;
-}
-
 .column-3-4 {
   float: left;
   width: 75%;
