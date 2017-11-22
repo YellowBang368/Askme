@@ -4,7 +4,7 @@ gem 'rails', '4.2.6'
 gem 'sqlite3'
 gem 'jquery-rails'
 
-group :development, :test do
+group :development, :'test.rb' do
   gem 'byebug'
 end
 

@@ -12,7 +12,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
+# you've limited to :test.rb, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Askme
@@ -33,7 +33,7 @@ module Askme
     config.active_record.raise_in_transactional_callbacks = true
 
     config.generators do |g|
-      g.test_framework  nil #to skip test framework
+      g.test_framework  nil #to skip test.rb framework
     end
 
     config.time_zone = 'Moscow'
