@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 gem 'jquery-rails'
 gem 'uglifier'
+gem 'rails_12factor'
 
 group :production do
   gem 'pg'
