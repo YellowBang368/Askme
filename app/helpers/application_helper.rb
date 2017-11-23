@@ -7,6 +7,14 @@ module ApplicationHelper
     end
   end
 
+  def head(user)
+    if user.head.present?
+      user.head
+    else
+      user.head = "005a55"
+    end
+  end
+
   def fa_icon(icon_class)
     content_tag 'span', '', class: "fa fa-#{icon_class}"
   end
