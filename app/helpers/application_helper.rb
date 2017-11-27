@@ -22,7 +22,7 @@ module ApplicationHelper
   def declination(number, first, second, third)
     ostatok = number % 10
 
-    number % 10
+    number = number % 100
     if number >= 11 && number <= 14
       return third
     end
