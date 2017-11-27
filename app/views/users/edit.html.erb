@@ -52,5 +52,7 @@
           <%= f.submit 'Сохранить', class: 'button button-small button-dark' %>
         </div>
     <% end %>
+
+    <%= link_to "Удалить аккаунт", user_path(@user), method: "delete", class: 'button button-small button-red buffer-top' %>
   </div>
 </div>

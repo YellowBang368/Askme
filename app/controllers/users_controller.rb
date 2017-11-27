@@ -34,6 +34,11 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def destroy
+    @user.destroy
+    redirect_to root_url, notice: "Пользователь удален"
+  end
+
   def show
     @head = @user.head
     @questions = @user.questions.order(created_at: :desc)

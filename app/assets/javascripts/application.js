@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // This is a manifest file that'll be compiled into application.js, which will
 // include all the files listed below.
 //
@@ -12,7 +11,6 @@
 // Read Sprockets README for details about supported directives.
 //
 // https://github.com/rails/sprockets#sprockets-directives
-=======
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -24,12 +22,10 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
->>>>>>> 76e593ba88a4ed8f0dcb321aa417eaa0ae638cd0
 //
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-<<<<<<< HEAD
 
 // Этот код добавляет обработчик события выдвигания формы при клике на кнопку
 // «Задать вопрос», которая видна только, когда страница открыта в маленьком
@@ -40,5 +36,3 @@ $(function(){
     return false;
   });
 });
-=======
->>>>>>> 76e593ba88a4ed8f0dcb321aa417eaa0ae638cd0
