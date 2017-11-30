@@ -35,6 +35,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user.questions.each { |question| question.destroy }
     @user.destroy
     redirect_to root_url, notice: "Пользователь удален"
   end
