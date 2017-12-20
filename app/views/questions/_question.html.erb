@@ -12,6 +12,10 @@
       <%= question.text %>
     </div>
 
+    <div class="question-author">
+      <%= @question.user %>
+    </div>
+
     <% if question.answer.present? %>
       <div class="question-answer text-lead">
         <%= question.answer if question.answer.present? %>

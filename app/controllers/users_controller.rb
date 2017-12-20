@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   end
 
   def new
-    redirect_to root_url, alert: "Вы уже залогинены" if current_user.present?
     @user = User.new
   end
 
