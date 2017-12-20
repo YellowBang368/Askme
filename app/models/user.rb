@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   DIGEST = OpenSSL::Digest::SHA256.new
 
   #Зависимости - взаимодействие с другими моделями
-  has_many :questions
+  has_many :questions, dependent: :delete_all
 
   #Валидации - условия для того, чтобы полученные данные проверку прошли
   validates :email, :username, presence: true
