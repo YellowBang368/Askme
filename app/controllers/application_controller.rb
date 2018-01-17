@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   private
+  def user_name(user)
+    user.name
+  end
+
   def load_user(id)
     @user ||= User.find(id)
   end

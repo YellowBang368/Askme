@@ -41,3 +41,12 @@
 .question-actions a {
   margin-left: 10px;
 }
+
+.author-name {
+  margin-top: 10px;
+}
+
+.author-name a {
+  font-size: 1.3em;
+  color: #2b2b2b;
+}

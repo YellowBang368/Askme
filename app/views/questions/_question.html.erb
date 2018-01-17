@@ -20,7 +20,11 @@
 
     <div class="question-date">
       <%= l(question.created_at, format: :short) %>
-      <%= load_user(question.author) %>
+      <div class="author-name">
+      <% unless question.author.nil? %>
+        <%= link_to User.find(question.author).name, user_path(User.find(question.author)) %>
+      <% end %>
+      </div>
     </div>
   </div>
 
