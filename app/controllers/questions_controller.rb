@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   before_action :load_question, only: [:show, :edit, :update, :destroy]
   before_action :authorize_user, except: [:create]
+
   def new
     @question = Question.new
   end
@@ -10,6 +11,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
+    @question.author = current_user.id
 
     if @question.save
       redirect_to user_path(@question.user), notice: "Вопрос задан"
@@ -33,8 +35,8 @@ class QuestionsController < ApplicationController
   end
 
   private
-    def load_question
-      @question = Question.find(params[:id])
+    def find_author(author_id)
+      User.find_by(id: author_id)
     end
 
     def authorize_user
@@ -43,9 +45,9 @@ class QuestionsController < ApplicationController
 
     def question_params
       if current_user.present? && params[:question][:user_id].to_i == current_user.id
-        params.require(:question).permit(:user_id, :text, :answer)
+        params.require(:question).permit(:user_id, :text, :answer, :author)
       else
-        params.require(:question).permit(:user_id, :text)
+        params.require(:question).permit(:user_id, :text, :author)
       end
     end
 end

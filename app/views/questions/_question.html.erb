@@ -20,6 +20,7 @@
 
     <div class="question-date">
       <%= l(question.created_at, format: :short) %>
+      <%= load_user(question.author) %>
     </div>
   </div>
 
